@@ -1,0 +1,73 @@
+<assemblies timestamp="04/15/2024 19:00:33">
+  <assembly name="C:\Users\syild\Downloads\Project API\Project API\ProjectService.Tests\bin\Debug\net6.0\ProjectService.Tests.dll" run-date="2024-04-15" run-time="19:00:33" total="3" passed="0" failed="3" skipped="0" time="3.500" errors="0">
+    <errors />
+    <collection total="3" passed="0" failed="3" skipped="0" name="Test collection for ProjectService.Tests.IntegrationTests" time="1.820">
+      <test name="ProjectService.Tests.IntegrationTests.Test2" type="ProjectService.Tests.IntegrationTests" method="Test2" time="1.7076335" result="Fail">
+        <failure>
+          <message>Expected response1.StatusCode to be 200, but found NotFound.
+
+With configuration:
+- Use declared types and members
+- Compare enums by value
+- Match member by name (or throw)
+- Without automatic conversion.
+- Be strict about the order of items in byte arrays
+</message>
+          <stack-trace>   at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.CollectingAssertionStrategy.ThrowIfAny(IDictionary`2 context)
+   at FluentAssertions.Equivalency.EquivalencyValidator.AssertEquality(EquivalencyValidationContext context)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, Func`2 config, String because, Object[] becauseArgs)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, String because, Object[] becauseArgs)
+   at ProjectService.Tests.IntegrationTests.Test2() in C:\Users\syild\Downloads\Project API\Project API\ProjectService.Tests\IntegrationTests.cs:line 109
+--- End of stack trace from previous location ---</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="ProjectService.Tests.IntegrationTests.Test1" type="ProjectService.Tests.IntegrationTests" method="Test1" time="0.0392871" result="Fail">
+        <failure>
+          <message>Expected response1.StatusCode to be 201, but found NotFound.
+
+With configuration:
+- Use declared types and members
+- Compare enums by value
+- Match member by name (or throw)
+- Without automatic conversion.
+- Be strict about the order of items in byte arrays
+</message>
+          <stack-trace>   at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.CollectingAssertionStrategy.ThrowIfAny(IDictionary`2 context)
+   at FluentAssertions.Equivalency.EquivalencyValidator.AssertEquality(EquivalencyValidationContext context)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, Func`2 config, String because, Object[] becauseArgs)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, String because, Object[] becauseArgs)
+   at ProjectService.Tests.IntegrationTests.Test1() in C:\Users\syild\Downloads\Project API\Project API\ProjectService.Tests\IntegrationTests.cs:line 84
+--- End of stack trace from previous location ---</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="ProjectService.Tests.IntegrationTests.Test3" type="ProjectService.Tests.IntegrationTests" method="Test3" time="0.0731109" result="Fail">
+        <failure>
+          <message>Expected response0.StatusCode to be 204, but found NotFound.
+
+With configuration:
+- Use declared types and members
+- Compare enums by value
+- Match member by name (or throw)
+- Without automatic conversion.
+- Be strict about the order of items in byte arrays
+</message>
+          <stack-trace>   at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.CollectingAssertionStrategy.ThrowIfAny(IDictionary`2 context)
+   at FluentAssertions.Equivalency.EquivalencyValidator.AssertEquality(EquivalencyValidationContext context)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, Func`2 config, String because, Object[] becauseArgs)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, String because, Object[] becauseArgs)
+   at ProjectService.Tests.IntegrationTests.Test3() in C:\Users\syild\Downloads\Project API\Project API\ProjectService.Tests\IntegrationTests.cs:line 130
+--- End of stack trace from previous location ---</stack-trace>
+        </failure>
+        <traits />
+      </test>
+    </collection>
+  </assembly>
+</assemblies>

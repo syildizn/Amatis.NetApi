@@ -26,9 +26,9 @@ namespace ProjectService.WebAPI.Controllers
         public async Task<IActionResult> AddUserToProject(int projectId, [FromBody] UserForm userForm)
         {
             var project = await _projectsService.Get(new int[] { projectId });
-            if(!project.Any())
+            if(project.Any())
             {
-                return NotFound($"Project with ID {projectId} not found.");
+                return BadRequest($"Failed to create user: {projectId}");
             }
 
             var user = new User
@@ -77,7 +77,7 @@ namespace ProjectService.WebAPI.Controllers
         public async Task<IActionResult> DeleteProject(int projectId)
         {
             var project = await _projectsService.Get(new int[] { projectId });
-            if (!project.Any())
+            if (project.Any())
             {
                 return NotFound($"Project with ID {projectId} not found.");
             }

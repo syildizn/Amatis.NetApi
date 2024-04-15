@@ -20,10 +20,10 @@ namespace ProjectService.WebAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUserById(int id)
         {
-            var user = await _usersService.Get(projectId: 0, ids: new int[] { id });
+            var user = await _usersService.GetById(id);
             if (user == null)
             {
-                return NotFound();
+                return NotFound($"User with ID {id} not found.");
             }
 
             return Ok(user);
@@ -62,9 +62,9 @@ namespace ProjectService.WebAPI.Controllers
 
         // DELETE api/users/{id}
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(int id)
+        public async Task<IActionResult> DeleteUser(int projectId, int[] ids )
         {
-            var user = await _usersService.Get(projectId: 0, ids: new int[] { id });
+            var user = await _usersService.Get(projectId: projectId, ids: ids);
             if (user == null)
             {
                 return NotFound();

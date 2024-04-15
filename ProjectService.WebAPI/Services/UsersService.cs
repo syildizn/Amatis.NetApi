@@ -54,6 +54,11 @@ namespace ProjectService.WebAPI.Services
 
             return true;
         }
+
+        public async Task<User> GetById(int id)
+        {
+            return await _testProjectContext.Users.FirstOrDefaultAsync(u => u.Id == id);
+        }
     }
 
     public interface IUsersService
@@ -65,5 +70,7 @@ namespace ProjectService.WebAPI.Services
         Task<User> Update(User user);
 
         Task<bool> Delete(User user);
+
+        Task<User> GetById(int id); // Yeni GetById metodu
     }
 }

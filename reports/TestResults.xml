@@ -1,10 +1,10 @@
-<assemblies timestamp="04/15/2024 19:00:33">
-  <assembly name="C:\Users\syild\Downloads\Project API\Project API\ProjectService.Tests\bin\Debug\net6.0\ProjectService.Tests.dll" run-date="2024-04-15" run-time="19:00:33" total="3" passed="0" failed="3" skipped="0" time="3.500" errors="0">
+<assemblies timestamp="04/15/2024 20:27:49">
+  <assembly name="C:\Users\syild\Downloads\Project API\Project API\ProjectService.Tests\bin\Debug\net6.0\ProjectService.Tests.dll" run-date="2024-04-15" run-time="20:27:49" total="3" passed="0" failed="3" skipped="0" time="7.591" errors="0">
     <errors />
-    <collection total="3" passed="0" failed="3" skipped="0" name="Test collection for ProjectService.Tests.IntegrationTests" time="1.820">
-      <test name="ProjectService.Tests.IntegrationTests.Test2" type="ProjectService.Tests.IntegrationTests" method="Test2" time="1.7076335" result="Fail">
+    <collection total="3" passed="0" failed="3" skipped="0" name="Test collection for ProjectService.Tests.IntegrationTests" time="1.455">
+      <test name="ProjectService.Tests.IntegrationTests.Test2" type="ProjectService.Tests.IntegrationTests" method="Test2" time="1.3105165" result="Fail">
         <failure>
-          <message>Expected response1.StatusCode to be 200, but found NotFound.
+          <message>Expected response1.StatusCode to be 200, but found InternalServerError.
 
 With configuration:
 - Use declared types and members
@@ -24,9 +24,9 @@ With configuration:
         </failure>
         <traits />
       </test>
-      <test name="ProjectService.Tests.IntegrationTests.Test1" type="ProjectService.Tests.IntegrationTests" method="Test1" time="0.0392871" result="Fail">
+      <test name="ProjectService.Tests.IntegrationTests.Test1" type="ProjectService.Tests.IntegrationTests" method="Test1" time="0.0518920" result="Fail">
         <failure>
-          <message>Expected response1.StatusCode to be 201, but found NotFound.
+          <message>Expected response1.StatusCode to be 201, but found InternalServerError.
 
 With configuration:
 - Use declared types and members
@@ -46,9 +46,9 @@ With configuration:
         </failure>
         <traits />
       </test>
-      <test name="ProjectService.Tests.IntegrationTests.Test3" type="ProjectService.Tests.IntegrationTests" method="Test3" time="0.0731109" result="Fail">
+      <test name="ProjectService.Tests.IntegrationTests.Test3" type="ProjectService.Tests.IntegrationTests" method="Test3" time="0.0926693" result="Fail">
         <failure>
-          <message>Expected response0.StatusCode to be 204, but found NotFound.
+          <message>Expected response0.StatusCode to be 204, but found InternalServerError.
 
 With configuration:
 - Use declared types and members

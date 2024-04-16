@@ -23,28 +23,38 @@ namespace ProjectService.WebAPI.Controllers
 
         // POST api/projects/{projectId}/users
         [HttpPost("{projectId}/users")]
-        public async Task<IActionResult> AddUserToProject(int projectId, [FromBody] UserForm userForm)
+        public async Task<IActionResult> AddUserToProject(int projectId, [FromBody] ProjectForm projectForm)
         {
             var project = await _projectsService.Get(new int[] { projectId });
             if(project.Any())
             {
-                return BadRequest($"Failed to create user: {projectId}");
+                return BadRequest($"This {projectId} already exists");
             }
 
-            var user = new User
+            var project1 = new Project
             {
-                Name = userForm.Name,
-                ProjectId = projectId,
-                AddedDate = userForm.AddedDate
-            };
+                Id = projectId,
+                Name = projectForm.Name,
+                IsAvailable = true,
+                AddedDate = DateTime.UtcNow
+        };
 
-            var addedUser = await _usersService.Add(user);
-            if (addedUser == null)
+            var addedProject = await _projectsService.Add(project1);
+            if (addedProject == null)
             {
                 return BadRequest("User could not be added.");
             }
 
-            return CreatedAtAction(nameof(UsersController.GetUserById), new { id = addedUser.Id }, addedUser);
+            var projectToPass = new Project
+            {
+                Id = addedProject.Id, 
+                Name = addedProject.Name,
+                AddedDate = addedProject.AddedDate,
+                IsAvailable=addedProject.IsAvailable
+                
+            };
+
+            return CreatedAtAction(nameof(UsersController.CreateUser), "Users", new { id = addedProject.Id }, projectToPass);
         }
 
        
@@ -63,7 +73,11 @@ namespace ProjectService.WebAPI.Controllers
         [HttpGet("{projectId}/users")]
         public async Task<IActionResult> GetUsersForProject(int projectId)
         {
-            var users = await _usersService.Get(projectId, null);
+
+
+            int[] projectIds = new[] { projectId };
+
+            var users = await _projectsService.Get(projectIds);
             if (users == null || !users.Any())
             {
                 return NotFound($"Users for project ID {projectId} not found.");
@@ -77,7 +91,7 @@ namespace ProjectService.WebAPI.Controllers
         public async Task<IActionResult> DeleteProject(int projectId)
         {
             var project = await _projectsService.Get(new int[] { projectId });
-            if (project.Any())
+            if (!project.Any())
             {
                 return NotFound($"Project with ID {projectId} not found.");
             }

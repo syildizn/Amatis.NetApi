@@ -1,3 +1,34 @@
+# **Merhaba Sertaç Bey**
+### Üç tane api'yi ProjectsController içinde oluşturdum. Bunları test etmek içinde Swagger'ı projeye ekledim.
+### Swagger ile yaptığım testin ekran görüntüleri aşağıda bulunmakta
+#### UsersController içindeki CreateUser dışında diğer apilere gerek yoktu ama onları da yapmak istedim
+#### Fakat sadece 2 gün zamanım olduğu için onlara yeterli zamanı ayıramadım. Şu an onlar düzgün çalışmıyor.
+#### Maalesef taskı whatsapptan bekliyordum. Mail ile geldiği ve o mail'de spam klasörüne düştüğü için
+#### task'tan ancak pazartesi haberim oldu. Ancak bu sürede elimden geldiği kadar .Net üzerine yoğunlaştım.
+#### Daha gidilecek çok yol var ama ben epey zevk aldım. .NET üzerinde uzmanlaşmaya kararlıyım.
+#### Süreç olumlu ya da olumsuz olsa da yine de bana verdiğiniz bu fırsat için teşekkür ederim.
+#### Sizin sayenizde backend developer olma yoluna girdim ve ilerleyeceğim.
+
+## Bana uluşmak isterseniz linkedIn hesabım: 
+[linkedIn.com/in/syildizn](https://www.linkedin.com/in/syildizn/)
+
+### Post 1
+
+![Post 1 işlemi](https://github.com/syildizn/Amatis.NetApi/blob/master/ProjectService.WebAPI/Assets/Post1.jpg)
+
+### Post 2
+
+![Post 2 işlemi](https://github.com/syildizn/Amatis.NetApi/blob/master/ProjectService.WebAPI/Assets/Post2.jpg)
+
+### Get 
+
+![Get işlemi](https://github.com/syildizn/Amatis.NetApi/blob/master/ProjectService.WebAPI/Assets/Get1.jpg)
+
+### Delete 
+
+![Delete işlemi](https://github.com/syildizn/Amatis.NetApi/blob/master/ProjectService.WebAPI/Assets/Delete1.jpg)
+
+# ------------------------------------------------------------------------------
 # Project API Service
 
 ## Environment 

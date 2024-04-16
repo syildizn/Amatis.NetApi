@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace ProjectService.WebAPI.Controllers
-{
+{//Seçkin Yıldız
     [ApiController]
     [Route("api/projects")]
     public class ProjectsController : ControllerBase
@@ -58,18 +58,7 @@ namespace ProjectService.WebAPI.Controllers
         }
 
        
-       /* private async Task<IActionResult> GetUserById(int id)
-        {
-            var user = await _usersService.Get(projectId: 0, new int[] { id }); 
-            if (user == null)
-            {
-                return NotFound($"User with ID {id} not found.");
-            }
-
-            return Ok(user);
-        }*/
-
-        // GET api/projects/{projectId}/users
+     
         [HttpGet("{projectId}/users")]
         public async Task<IActionResult> GetUsersForProject(int projectId)
         {

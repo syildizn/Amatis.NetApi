@@ -7,7 +7,7 @@ using ProjectService.WebAPI.SeedData;
 using ProjectService.WebAPI.Services;
 
 namespace ProjectService.WebAPI.Controllers
-{
+{//Seçkin Yıldız
     [ApiController]
     [Route("api/users")]
     public class UsersController : ControllerBase
@@ -21,13 +21,12 @@ namespace ProjectService.WebAPI.Controllers
             
         }
 
-        // GET api/users/project/{projectId}?ids=1,2,3
+        
         // GET api/users/project/{projectId}
         [HttpGet("project/{projectId}")]
         public async Task<IActionResult> GetUsersByProjectId(int projectId)
         {
-            // Bu çağrıda ikinci parametre olarak boş bir dizi geçiriyoruz çünkü 
-            // belirli kullanıcı id'leri ile ilgilenmiyoruz.
+            
             var users = await _usersService.Get(projectId, new int[] { });
 
             if (!users.Any())
@@ -49,7 +48,7 @@ namespace ProjectService.WebAPI.Controllers
             // Random nesnesini oluştur
             Random random = new Random();
 
-            // 1 ile 9999 arasında rastgele bir sayı üret (örnek olarak)
+            // 1 ile 99999 arasında rastgele bir sayı üret (örnek olarak)
             int randomId = random.Next(1, 100000);
 
             var user = new User
